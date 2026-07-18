@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self' blob:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>MLN Pilot Camera</title>
+  <link rel="stylesheet" href="camera.css">
+</head>
+<body>
+<main class="camera-app">
+  <h1>ถ่ายภาพยืนยันการลงเวลา</h1>
+  <div class="preview">
+    <video id="cameraVideo" autoplay muted playsinline></video>
+    <img id="cameraPhoto" class="hidden" alt="ภาพถ่ายสำหรับยืนยัน">
+    <canvas id="cameraCanvas" class="hidden"></canvas>
+  </div>
+  <p id="cameraStatus" class="status" aria-live="polite">กำลังเปิดกล้องและตรวจสอบตำแหน่ง...</p>
+  <div class="actions">
+    <button id="cameraSwitch" class="secondary" type="button">สลับกล้อง</button>
+    <button id="cameraTake" class="primary" type="button">ถ่ายภาพ</button>
+    <button id="cameraRetake" class="secondary hidden" type="button">ถ่ายใหม่</button>
+    <button id="cameraUse" class="primary hidden" type="button">ใช้ภาพนี้</button>
+    <button id="cameraCancel" class="danger" type="button">ยกเลิก</button>
+  </div>
+</main>
+<script src="camera.js"></script>
+</body>
+</html>
